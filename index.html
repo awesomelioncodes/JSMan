@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSMan</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 id="header">{{ title }}</h1>
+      <ul>
+        <video
+          id="virusimgul"
+          src="images/billvirus.mp4"
+          poster="images/virus.jpg"
+          controls
+        ></video>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          title: "JSMan",
+          version: "0.1.0",
+          description:
+            'An app that has videos all about diseases example "COVID-19"',
+          tags: "#vuejs #app #diseases #poorly #nhs",
+          virusimg: "<img src='images/virus.jpg'></img>",
+        },
+      });
+      var header = document.getElementById("header");
+      header.style.textAlign = "Center";
+      header.style.width = "100%";
+      header.style.border = "2px black solid";
+      header.style.backgroundColor = "skyblue";
+
+      var virusimgul = document.getElementById("virusimgul");
+      virusimgul.style.border = "2px black solid";
+      virusimgul.style.width = "auto";
+      virusimgul.style.height = "auto";
+    </script>
+  </body>
+</html>
